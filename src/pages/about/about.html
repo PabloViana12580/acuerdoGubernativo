@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Acuerdo Gubernativo 229
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+	<ion-list inset>
+		<button ion-item *ngFor="let item of items" (click)="siguientePagina(item)">
+			{{item}}
+		</button>
+	</ion-list>
+</ion-content>

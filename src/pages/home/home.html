@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card *ngFor="let Acuerdo of acu" color="primary">
+  <ion-card-header>Acuerdos cumplidos</ion-card-header>
+    <ion-card-content>
+      <ion-item color="primary">
+        <ion-label>Acuerdo numero: </ion-label>
+        <ion-input type="text" [(ngModel)]="Acuerdo.numero" readonly = "true"></ion-input>
+      </ion-item>
+
+    </ion-card-content>
+</ion-card>
+</ion-content>

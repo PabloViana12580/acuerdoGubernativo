@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Reportes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+ 
+  <ion-item>
+    <ion-label stacked>De: </ion-label>
+    <ion-input [(ngModel)]="letterObj.de"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Para: </ion-label>
+    <ion-input [(ngModel)]="letterObj.para"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Cuerpo</ion-label>
+    <ion-textarea [(ngModel)]="letterObj.cuerpo" rows="10"></ion-textarea>
+  </ion-item>
+ 
+  <button ion-button full (click)="createPdf()">Crear PDF!</button>
+   <button ion-button full (click)="downloadPdf()" color="secondary" [disabled]="!pdfObj">Descargar PDF</button>
+ 
+</ion-content>

@@ -1,0 +1,55 @@
+<!--
+  Generated template for the AgregarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>AgregarPage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form (ngSubmit)="logForm()">
+
+    <ion-item>
+        <ion-label floating>Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.nombre" name="title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>Apellido</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.apellido" name="description"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      	<ion-label>Sexo</ion-label>
+    		<ion-select [(ngModel)]="todo.sexo" name="sexo">
+      			<ion-option value="masculino">Masculino</ion-option>
+      			<ion-option value="femenino">Femenino</ion-option>
+   			 </ion-select>
+ 	</ion-item>
+
+    <ion-item>
+      <ion-label floating>Correo electronico</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.correo" name="correo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Puesto</ion-label>
+        <ion-input type="text" [(ngModel)]="todo.puesto" name="puesto"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Numero</ion-label>
+        <ion-input type="Number" [(ngModel)]="todo.numero" name="numero"></ion-input>
+    </ion-item>
+
+    <button ion-button type="submit" block>Agregar compañero</button>
+    </form>
+
+</ion-content>

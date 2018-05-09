@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Grupos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-fab right bottom>
+    <button ion-fab color="primary" (click)="cambiarPagina()"><ion-icon name="add"></ion-icon></button>
+</ion-fab>
+
+<ion-card *ngFor="let companero of compas" color="primary">
+	<ion-card-header>Compañero de trabajo</ion-card-header>
+		<ion-card-content>
+			<ion-item color="primary">
+			  <ion-label>Nombre</ion-label>
+			  <ion-input type="text" [(ngModel)]="companero.nombre" readonly = "true"></ion-input>
+			</ion-item>
+			<ion-item color="primary">
+			  <ion-label>Apellido</ion-label>
+			  <ion-input type="text" [(ngModel)]="companero.apellido" readonly = "true"></ion-input>
+			</ion-item >
+			<ion-item color="primary">
+			  <ion-label>Sexo</ion-label>
+			  <ion-input type="text" [(ngModel)]="companero.sexo" readonly = "true"></ion-input>
+			</ion-item>
+			<ion-item color="primary">
+			  <ion-label>Correo</ion-label>
+			  <ion-input type="text" [(ngModel)]="companero.correo" readonly = "true"></ion-input>
+			</ion-item>
+			<ion-item color="primary">
+			  <ion-label>Puesto</ion-label>
+			  <ion-input type="text" [(ngModel)]="companero.puesto" readonly = "true"></ion-input>
+			</ion-item>
+			<ion-item color="primary">
+			  <ion-label>Numero</ion-label>
+			  <ion-input type="Number" [(ngModel)]="companero.numero" readonly = "true"></ion-input>
+			</ion-item>
+
+		</ion-card-content>
+</ion-card>
+</ion-content>
